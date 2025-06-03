@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     font-family: sans-serif;
     margin: 0;
@@ -5,10 +6,12 @@
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     background-color: rgb(27, 26, 33);
 }
 
+/* Card Styling */
 .card {
     width: 90%;
     max-width: 470px;
@@ -18,13 +21,16 @@ body {
     text-align: center;
     border-radius: 20px;
     padding: 40px 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Search Bar */
 .search {
     width: 100%;
     justify-content: space-between;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .search input {
@@ -33,11 +39,11 @@ body {
     background-color: #ebfffc;
     color: #555;
     padding: 10px 25px;
-    height: 60px;
+    height: 50px;
     margin-right: 16px;
     border-radius: 31px;
     flex: 1;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .btn1 {
@@ -45,8 +51,8 @@ body {
     border: 0;
     outline: 0;
     background-color: #ebfffc;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -54,44 +60,125 @@ body {
     width: 20px;
 }
 
+/* Weather Icon */
 .weather-icon {
-    width: 140px;
+    width: 120px;
 }
 
+/* Weather Details */
 .details {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    margin-top: 50px;
+    padding: 0 10px;
+    margin-top: 40px;
 }
-.temp{
-    font-size: 75px;
+
+.temp {
+    font-size: 60px;
 }
-.city{
-    font-size: 30px;
+
+.city {
+    font-size: 24px;
     font-weight: 400;
 }
-.col{
+
+.col {
     display: flex;
     align-items: center;
     text-align: center;
+    flex: 1;
 }
-.col img{
-    width: 40px;
+
+.col img {
+    width: 35px;
     margin-right: 10px;
 }
-.humidity, .wind{
-    font-size: 25px;
+
+.humidity, .wind {
+    font-size: 20px;
     margin-top: -6px;
 }
-.weather{
+
+/* Weather and Error */
+.weather {
     display: none;
 }
-.error{
+
+.error {
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
-    margin-top:10px ;
+    margin-top: 10px;
     display: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .card {
+        padding: 30px 20px;
+        margin-top: 100px;
+    }
+
+    .temp {
+        font-size: 50px;
+    }
+
+    .city {
+        font-size: 20px;
+    }
+
+    .details {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .col {
+        margin-bottom: 20px;
+    }
+
+    .col img {
+        width: 30px;
+    }
+
+    .humidity, .wind {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search input {
+        height: 40px;
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .btn1 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn1 img {
+        width: 15px;
+    }
+
+    .temp {
+        font-size: 40px;
+    }
+
+    .city {
+        font-size: 18px;
+    }
+
+    .details {
+        padding: 0;
+    }
+
+    .col img {
+        width: 25px;
+    }
+
+    .humidity, .wind {
+        font-size: 16px;
+    }
 }
